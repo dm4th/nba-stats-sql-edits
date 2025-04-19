@@ -1,0 +1,4 @@
+"""
+Convert this question to SQL:
+{question}
+"""
