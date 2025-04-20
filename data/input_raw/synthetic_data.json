@@ -1,0 +1,802 @@
+[
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many players are listed in the database?",
+    "sql": "SELECT COUNT(*) FROM common_player_info",
+    "type": "counting"
+  },
+  {
+    "natural_language": "What is the average weight of players?",
+    "sql": "SELECT ROUND(AVG(CAST(weight AS FLOAT)), 2) FROM common_player_info WHERE weight != ''",
+    "type": "aggregation"
+  },
+  {
+    "natural_language": "How many games went to overtime?",
+    "sql": "SELECT COUNT(*) FROM line_score WHERE pts_ot1_home IS NOT NULL",
+    "type": "counting"
+  },
+  {
+    "natural_language": "Which official has officiated the most games?",
+    "sql": "SELECT official_id FROM officials GROUP BY official_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "List all players from Spain.",
+    "sql": "SELECT first_name, last_name FROM common_player_info WHERE country = 'Spain'",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "How many games were played in total?",
+    "sql": "SELECT COUNT(DISTINCT game_id) FROM game",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all distinct jersey numbers worn by players.",
+    "sql": "SELECT DISTINCT jersey FROM common_player_info WHERE jersey != ''",
+    "type": "filtering"
+  },
+  {
+    "natural_language": "Which player has been inactive the most times?",
+    "sql": "SELECT player_id FROM inactive_players GROUP BY player_id ORDER BY COUNT(*) DESC LIMIT 1",
+    "type": "ranking"
+  },
+  {
+    "natural_language": "How many players were drafted in 2018?",
+    "sql": "SELECT COUNT(*) FROM draft_history WHERE season = '2018'",
+    "type": "counting"
+  },
+  {
+    "natural_language": "List all games played on Christmas Day.",
+    "sql": "SELECT game_id FROM game_info WHERE strftime('%m-%d', game_date) = '12-25'",
+    "type": "filtering"
+  }
+]
